@@ -1,5 +1,5 @@
 <template>
-  <div class="textEditor">
+  <div class="w-full m-10">
     <textarea
       v-model="text"
       class="w-full p-4 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -10,19 +10,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      text: '',
-    }
-  },
-}
+<script setup>
+import { useTextEditor } from "@/components/JournalEntry/TextEditor";
+
+const { text } = useTextEditor();
 </script>
 
+
 <style scoped>
-.text-editor {
-  width: 100%;
-  margin: 10px 0;
-}
 </style>
